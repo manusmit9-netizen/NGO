@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery – NGO Forum India</title>
+  <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <style>.gallery-item{background:#e2e8f0; height:180px; border-radius: var(--radius); display:flex; align-items:center; justify-content:center; font-weight:700; color:#334155;}</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="/"><span class="brand-logo">NF</span><span class="brand-name">NGO Forum India</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/programs.html">Programs</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/events.html">Events</a>
+      <a href="/news.html">News</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/membership.html">Membership</a>
+      <a href="/donate.html">Donate</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero"><div class="container"><h1>Gallery</h1><p>Highlights from our programs and events.</p></div></section>
+  <section>
+    <div class="container grid cols-3">
+      <div class="card gallery-item">Image 1</div>
+      <div class="card gallery-item">Image 2</div>
+      <div class="card gallery-item">Image 3</div>
+      <div class="card gallery-item">Image 4</div>
+      <div class="card gallery-item">Image 5</div>
+      <div class="card gallery-item">Image 6</div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container">© <span id="year"></span> NGO Forum India</div></footer>
+<script src="/assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

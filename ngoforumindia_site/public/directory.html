@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NGO Directory – NGO Forum India</title>
+  <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="/"><span class="brand-logo">NF</span><span class="brand-name">NGO Forum India</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/programs.html">Programs</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/events.html">Events</a>
+      <a href="/news.html">News</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/membership.html">Membership</a>
+      <a href="/donate.html">Donate</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero"><div class="container"><h1>NGO Directory</h1><p>Search and filter NGOs by sector and location.</p></div></section>
+  <section>
+    <div class="container">
+      <div class="card">
+        <div class="form-row">
+          <div>
+            <label for="q">Search</label>
+            <input id="q" placeholder="Name or keyword" />
+          </div>
+          <div>
+            <label for="sector">Sector</label>
+            <select id="sector"><option value="">All sectors</option></select>
+          </div>
+        </div>
+        <div class="form-row" style="margin-top:10px;">
+          <div>
+            <label for="location">Location</label>
+            <input id="location" placeholder="City, State" />
+          </div>
+          <div style="align-self: end;">
+            <button id="clearFilters" class="button" type="button">Clear filters</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:16px; color: var(--color-muted);"><span id="count">0</span> results</div>
+
+      <div id="results" class="grid cols-3" style="margin-top:12px;"></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container">© <span id="year"></span> NGO Forum India</div></footer>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/directory.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

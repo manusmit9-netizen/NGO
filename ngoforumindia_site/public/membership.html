@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Membership – NGO Forum India</title>
+  <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="/"><span class="brand-logo">NF</span><span class="brand-name">NGO Forum India</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/programs.html">Programs</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/events.html">Events</a>
+      <a href="/news.html">News</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/membership.html">Membership</a>
+      <a href="/donate.html">Donate</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero"><div class="container"><h1>Membership</h1><p>Join the network and access resources, events, and collaboration opportunities.</p></div></section>
+  <section>
+    <div class="container">
+      <form id="membershipForm" class="card" data-api="/api/membership">
+        <div class="form-row">
+          <div><label for="name">Full name</label><input id="name" name="name" required /></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+        </div>
+        <div class="form-row">
+          <div><label for="phone">Phone</label><input id="phone" name="phone" /></div>
+          <div><label for="organization">Organization</label><input id="organization" name="organization" /></div>
+        </div>
+        <div class="form-row">
+          <div><label for="location">Location</label><input id="location" name="location" /></div>
+          <div>
+            <label for="sector">Sector</label>
+            <select id="sector" name="sector">
+              <option value="">Select sector</option>
+              <option>Health</option>
+              <option>Education</option>
+              <option>Livelihoods</option>
+              <option>Environment</option>
+              <option>Inclusion</option>
+              <option>Governance</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:12px; display:flex; gap:10px; align-items:center;">
+          <button class="button" type="submit">Submit</button>
+          <span id="membershipStatus" class="badge hidden">Submitting…</span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container">© <span id="year"></span> NGO Forum India</div></footer>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/forms.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

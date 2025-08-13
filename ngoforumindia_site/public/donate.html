@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donate – NGO Forum India</title>
+  <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="/"><span class="brand-logo">NF</span><span class="brand-name">NGO Forum India</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/programs.html">Programs</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/events.html">Events</a>
+      <a href="/news.html">News</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/membership.html">Membership</a>
+      <a href="/donate.html">Donate</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero"><div class="container"><h1>Donate</h1><p>Support our programs and network strengthening efforts.</p></div></section>
+  <section>
+    <div class="container grid cols-2">
+      <div class="card">
+        <h3>How to donate</h3>
+        <p>We will soon integrate a payment gateway. For now, you can pledge a donation and we will follow up with details.</p>
+        <ul>
+          <li>Corporate CSR: contact us for partnership</li>
+          <li>Bank transfer: details shared upon pledge</li>
+        </ul>
+      </div>
+      <form id="donateForm" class="card" data-api="/api/donate-pledge">
+        <div class="form-row">
+          <div><label for="name">Full name</label><input id="name" name="name" required /></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+        </div>
+        <div class="form-row">
+          <div><label for="amount">Pledge amount (INR)</label><input id="amount" name="amount" type="number" min="1" required /></div>
+          <div><label for="purpose">Purpose</label><input id="purpose" name="purpose" placeholder="General, program, etc." /></div>
+        </div>
+        <div style="margin-top:12px; display:flex; gap:10px; align-items:center;">
+          <button class="button" type="submit">Pledge</button>
+          <span id="donateStatus" class="badge hidden">Submitting…</span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container">© <span id="year"></span> NGO Forum India</div></footer>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/forms.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

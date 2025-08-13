@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NGO Forum India</title>
+  <meta name="description" content="A national forum for NGOs in India to connect, collaborate, and create impact." />
+  <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="/">
+        <span class="brand-logo">NF</span>
+        <span class="brand-name">NGO Forum India</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/programs.html">Programs</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/events.html">Events</a>
+        <a href="/news.html">News</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/gallery.html">Gallery</a>
+        <a href="/membership.html">Membership</a>
+        <a href="/donate.html">Donate</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Stronger together</h1>
+        <p>NGO Forum India is a collaborative platform for civil society organizations to share knowledge, build capacity, and drive measurable impact across communities.</p>
+        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap: wrap;">
+          <a class="button" href="/directory.html">Explore NGO Directory</a>
+          <a class="button" style="background: var(--color-primary);" href="/membership.html">Become a Member</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid cols-3">
+          <div class="card">
+            <h3>Programs and Initiatives</h3>
+            <p>Collaborative programs in health, education, livelihoods, environment and more.</p>
+            <a class="button" href="/programs.html">See programs</a>
+          </div>
+          <div class="card">
+            <h3>Resources & Toolkits</h3>
+            <p>Grant templates, M&E guides, and training materials for nonprofit leaders.</p>
+            <a class="button" href="/resources.html">Browse resources</a>
+          </div>
+          <div class="card">
+            <h3>Events & Workshops</h3>
+            <p>Connect with peers at convenings, webinars, and regional meetups.</p>
+            <a class="button" href="/events.html">View events</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Latest news</h2>
+        <div id="news-list" class="grid cols-2"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Upcoming events</h2>
+        <div id="events-list" class="grid cols-2"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year"></span> NGO Forum India</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/home.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – NGO Forum India</title>
+  <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="/"><span class="brand-logo">NF</span><span class="brand-name">NGO Forum India</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/programs.html">Programs</a>
+      <a href="/directory.html">Directory</a>
+      <a href="/events.html">Events</a>
+      <a href="/news.html">News</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/membership.html">Membership</a>
+      <a href="/donate.html">Donate</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero"><div class="container"><h1>Contact us</h1><p>We’d love to hear from you.</p></div></section>
+  <section>
+    <div class="container">
+      <form id="contactForm" class="card" data-api="/api/contact">
+        <div class="form-row">
+          <div><label for="name">Full name</label><input id="name" name="name" required /></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+        </div>
+        <div class="form-row">
+          <div><label for="phone">Phone</label><input id="phone" name="phone" /></div>
+          <div><label for="subject">Subject</label><input id="subject" name="subject" /></div>
+        </div>
+        <div style="margin-top:12px;">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div style="margin-top:12px; display:flex; gap:10px; align-items:center;">
+          <button class="button" type="submit">Send</button>
+          <span id="contactStatus" class="badge hidden">Submitting…</span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container">© <span id="year"></span> NGO Forum India</div></footer>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/forms.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

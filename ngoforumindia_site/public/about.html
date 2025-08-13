@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About – NGO Forum India</title>
+  <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="/">
+        <span class="brand-logo">NF</span>
+        <span class="brand-name">NGO Forum India</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/programs.html">Programs</a>
+        <a href="/directory.html">Directory</a>
+        <a href="/events.html">Events</a>
+        <a href="/news.html">News</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/gallery.html">Gallery</a>
+        <a href="/membership.html">Membership</a>
+        <a href="/donate.html">Donate</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>About us</h1>
+        <p>We are a network enabling NGOs across India to share knowledge, collaborate, and deliver impact at scale.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid cols-2">
+        <div class="card">
+          <h3>Our mission</h3>
+          <p>To strengthen India’s civil society through collaboration, capacity building, and advocacy.</p>
+        </div>
+        <div class="card">
+          <h3>Our vision</h3>
+          <p>A resilient, inclusive, and equitable India powered by strong community institutions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Team</h2>
+        <div class="grid cols-3">
+          <div class="card"><h3>Founder</h3><p>Name TBD</p></div>
+          <div class="card"><h3>Director</h3><p>Name TBD</p></div>
+          <div class="card"><h3>Program Lead</h3><p>Name TBD</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container">© <span id="year"></span> NGO Forum India</div></footer>
+  <script src="/assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
